@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trip Jepun 2027</title>
+<meta name="description" content="Itinerary trip family ke Kawaguchiko, Gunung Fuji, 11-16 Mac 2027.">
+<style>
+  :root {
+    --bg: #FAFAF8; --surface: #FFFFFF; --text: #1F2328; --muted: #5B6168; --line: #E3E4E6;
+    --accent: #B4232C; --accent-soft: #FBEDEE; --warn: #8A4B00; --warn-soft: #FFF4E0;
+    --radius: 8px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #15171A; --surface: #1C1F23; --text: #E8E9EB; --muted: #A3A8AE; --line: #2E3237;
+      --accent: #F0717A; --accent-soft: #2A1C1E; --warn: #F3B45C; --warn-soft: #2A2216; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+  a { color: var(--accent); }
+  a:focus-visible, summary:focus-visible, video:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  header.top { padding: 28px 0 8px; }
+  .eyebrow { margin: 0; color: var(--muted); font-size: 14px; }
+  h1 { margin: 4px 0 6px; font-size: 32px; line-height: 1.2; }
+  .sub { margin: 0; color: var(--muted); }
+  .note { display: inline-block; margin-top: 10px; font-size: 14px; color: var(--warn); background: var(--warn-soft); padding: 4px 10px; border-radius: 999px; }
+  nav.days { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+  nav.days ul { display: flex; gap: 6px; list-style: none; margin: 0 auto; padding: 10px 16px; max-width: 860px; overflow-x: auto; scrollbar-width: none; }
+  nav.days a { display: block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: var(--text); font-size: 14px; white-space: nowrap; background: var(--surface); min-height: 36px; }
+  nav.days a:hover { border-color: var(--accent); color: var(--accent); }
+  section { padding: 22px 0 6px; }
+  h2 { font-size: 22px; margin: 0 0 12px; }
+  h3 { font-size: 17px; margin: 18px 0 6px; }
+  .video { margin: 14px 0 6px; }
+  video { width: 100%; aspect-ratio: 16 / 9; display: block; background: #000; border-radius: var(--radius); }
+  .caption { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+  dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; }
+  dl.facts dt { color: var(--muted); }
+  dl.facts dd { margin: 0; }
+  .people { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .people div { border-top: 3px solid var(--line); padding-top: 8px; }
+  .people h3 { margin: 0 0 4px; font-size: 15px; }
+  .people ul { margin: 0; padding-left: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  .day { border-top: 1px solid var(--line); }
+  .day h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+  .day h2 .n { color: var(--accent); }
+  .day h2 .d { color: var(--muted); font-size: 15px; font-weight: 400; }
+  ol.plan { list-style: none; margin: 0; padding: 0; }
+  ol.plan li { display: grid; grid-template-columns: 64px 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--line); }
+  ol.plan li:last-child { border-bottom: 0; }
+  .time { color: var(--muted); font-variant-numeric: tabular-nums; }
+  ul.tips { margin: 10px 0 0; padding-left: 18px; }
+  ul.tips li { margin: 3px 0; }
+  .key { font-weight: 600; }
+  .callout { border-left: 4px solid var(--warn); background: var(--warn-soft); padding: 10px 14px; border-radius: 0 var(--radius) var(--radius) 0; margin: 10px 0; }
+  .callout p { margin: 0; }
+  .status { font-size: 13px; color: var(--warn); white-space: nowrap; }
+  details { border-top: 1px solid var(--line); padding: 10px 0; }
+  summary { cursor: pointer; font-weight: 600; min-height: 32px; }
+  details ul { padding-left: 18px; font-size: 14px; }
+  footer { color: var(--muted); font-size: 13px; padding: 24px 0 40px; border-top: 1px solid var(--line); margin-top: 24px; }
+  @media (max-width: 560px) {
+    h1 { font-size: 26px; }
+    ol.plan li { grid-template-columns: 54px 1fr; }
+    th, td { padding: 7px 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">Itinerary family</p>
+    <h1>Trip Jepun 2027</h1>
+    <p class="sub">Kawaguchiko, Gunung Fuji · Khamis 11 – Selasa 16 Mac 2027 · 6 hari 5 malam</p>
+    <span class="note">Tarikh belum muktamad. Flight belum ditempah.</span>
+  </header>
+</div>
+
+<nav class="days" aria-label="Pergi ke hari">
+  <ul>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#hari-1">Hari 1</a></li>
+    <li><a href="#hari-2">Hari 2</a></li>
+    <li><a href="#hari-3">Hari 3</a></li>
+    <li><a href="#hari-4">Hari 4</a></li>
+    <li><a href="#hari-5">Hari 5</a></li>
+    <li><a href="#hari-6">Hari 6</a></li>
+    <li><a href="#barang">Barang</a></li>
+    <li><a href="#tempahan">Tempahan</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+  <section id="video" class="video" aria-label="Video">
+    <video controls playsinline preload="metadata" poster="poster.jpg">
+      <source src="Trip-Jepun-2027.mp4" type="video/mp4">
+      Browser ini tak boleh main video. <a href="Trip-Jepun-2027.mp4">Muat turun video</a>.
+    </video>
+    <p class="caption">Pak Long terangkan plan trip (lebih kurang 3 minit, ada suara).</p>
+  </section>
+
+  <section aria-labelledby="ringkas">
+    <h2 id="ringkas">Ringkasnya</h2>
+    <dl class="facts">
+      <dt>Siapa</dt><dd>11 orang: 6 dewasa + 5 budak</dd>
+      <dt>Tinggal</dt><dd>Satu homestay sahaja di Kawaguchiko. Tak pindah-pindah.</dd>
+      <dt>Kenderaan</dt><dd>Van besar + driver, semua hari</dd>
+      <dt>Makanan</dt><dd>Halal certified sahaja. Homestay ada dapur, masak sendiri + bawa bekal.</dd>
+      <dt>Main salji</dt><dd>Hari 2, Fujiten Snow Resort, lebih kurang 4 jam</dd>
+      <dt>Raya</dt><dd>Dijangka 10–11 Mac. 11 Mac = Raya kedua. Tiada puasa masa trip.</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="siapa">
+    <h2 id="siapa">Siapa pergi</h2>
+    <div class="people">
+      <div><h3>Tok &amp; Tok Wan</h3><ul><li>Tok</li><li>Tok Wan</li></ul></div>
+      <div><h3>Keluarga Pak Long</h3><ul><li>Pak Long</li><li>Mak Long</li><li>Ayyash (1 thn 7 bln)</li></ul></div>
+      <div><h3>Keluarga Pak Lang</h3><ul><li>Pak Lang</li><li>Mak Lang</li><li>Ayish (8)</li><li>Iz (4–5)</li><li>Ivy (3–5)</li><li>Iris (1 thn 2 bln)</li></ul></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="pelan">
+    <h2 id="pelan">Pelan 6 hari</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Hari</th><th>Tarikh</th><th>Plan</th><th>Drive</th></tr></thead>
+        <tbody>
+          <tr><td><a href="#hari-1">1</a></td><td>Khamis 11 Mac</td><td>Sampai Haneda, ke homestay, Masjid Kawaguchiko</td><td>~2 jam</td></tr>
+          <tr><td><a href="#hari-2">2</a></td><td>Jumaat 12 Mac</td><td><span class="key">Main salji</span> di Fujiten (~4 jam)</td><td>~25 min</td></tr>
+          <tr><td><a href="#hari-3">3</a></td><td>Sabtu 13 Mac</td><td>Thomas Land, petik strawberi, Oshino Hakkai</td><td>~10–20 min</td></tr>
+          <tr><td><a href="#hari-4">4</a></td><td>Ahad 14 Mac</td><td>Tempat tersembunyi: gua ais, kampung atap jerami, tasik sunyi</td><td>~20–30 min</td></tr>
+          <tr><td><a href="#hari-5">5</a></td><td>Isnin 15 Mac</td><td>Tokyo Disneyland (hari panjang)</td><td>~2–2.5 jam</td></tr>
+          <tr><td><a href="#hari-6">6</a></td><td>Selasa 16 Mac</td><td>Fuji Safari Park, Gotemba Outlets, terus ke Haneda</td><td>~1 jam</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="hari-1" class="day" aria-labelledby="h1t">
+    <h2 id="h1t"><span class="n">Hari 1</span> Sampai <span class="d">Khamis, 11 Mac</span></h2>
+    <ol class="plan">
+      <li><span class="time">Pagi</span><span>Sampai lapangan terbang <b>Haneda</b>. Solat di prayer room airport.</span></li>
+      <li><span class="time">Siang</span><span>Driver ambil di airport. Drive ~2 jam ke Kawaguchiko.</span></li>
+      <li><span class="time">Petang</span><span>Check-in homestay. Beli beras, sayur, buah di supermarket. Daging halal: order online, hantar ke homestay.</span></li>
+      <li><span class="time">Maghrib</span><span>Solat di <b>Masjid Fujikawaguchiko</b>. Makan malam di kafe halal masjid.</span></li>
+      <li><span class="time">Malam</span><span>Masak bekal untuk esok. Tidur awal.</span></li>
+    </ol>
+  </section>
+
+  <section id="hari-2" class="day" aria-labelledby="h2t">
+    <h2 id="h2t"><span class="n">Hari 2</span> Main salji <span class="d">Jumaat, 12 Mac</span></h2>
+    <ol class="plan">
+      <li><span class="time">08:30</span><span>Keluar homestay (~25 min).</span></li>
+      <li><span class="time">09:00</span><span>Sampai <b>Fujiten Snow Resort</b>. Sewa baju salji + boot.</span></li>
+      <li><span class="time">09:15</span><span><b>Main salji ~4 jam</b>: gelongsor salji, kids park, buat orang salji.</span></li>
+      <li><span class="time">11:30</span><span>Rehat, makan bekal dalam bangunan.</span></li>
+      <li><span class="time">13:30</span><span>Pulang baju sewa, balik homestay. Solat Zohor + Asar (jamak).</span></li>
+      <li><span class="time">Petang</span><span>Bebas. Pilihan: jalan tepi Tasik Kawaguchi (Oishi Park).</span></li>
+    </ol>
+    <ul class="tips">
+      <li>Harga 2025-26: masuk kawasan sled ¥1,200 seorang, sewa sled ¥800. Bawah 3 tahun percuma. Semak harga baru.</li>
+      <li>Tiada makanan halal di Fujiten. Bawa bekal + air panas.</li>
+      <li>Nak solat Jumaat? Main 09:15–11:30, Jumaat di masjid (~25 min), sambung main 13:30–15:00.</li>
+      <li>Cuaca buruk: tukar dengan Hari 4. Backup: Snow Park Yeti (~1 jam).</li>
+    </ul>
+  </section>
+
+  <section id="hari-3" class="day" aria-labelledby="h3t">
+    <h2 id="h3t"><span class="n">Hari 3</span> Thomas Land + strawberi <span class="d">Sabtu, 13 Mac</span></h2>
+    <ol class="plan">
+      <li><span class="time">09:00</span><span><b>Fuji-Q Highland – Thomas Land</b> (~10 min). Ride kecil untuk budak. Masuk percuma, ride bayar.</span></li>
+      <li><span class="time">12:00</span><span>Makan bekal, atau kafe halal masjid (~10 min).</span></li>
+      <li><span class="time">13:30</span><span><b>Fuji Oshino Berryland</b>: petik strawberi (Mac memang musimnya).</span></li>
+      <li><span class="time">15:00</span><span><b>Oshino Hakkai</b>: kampung kecil, kolam air jernih dari salji Fuji.</span></li>
+    </ol>
+  </section>
+
+  <section id="hari-4" class="day" aria-labelledby="h4t">
+    <h2 id="h4t"><span class="n">Hari 4</span> Tempat tersembunyi <span class="d">Ahad, 14 Mac</span></h2>
+    <ol class="plan">
+      <li><span class="time">09:30</span><span><b>Fugaku Wind Cave</b> (gua lava). Pilihan: <b>Narusawa Ice Cave</b> dengan tiang ais. Laluan sempit, dukung budak kecil.</span></li>
+      <li><span class="time">11:30</span><span><b>Saiko Iyashi no Sato Nenba</b>: kampung rumah atap jerami. Ada ruang solat + menu halal (semak sijil).</span></li>
+      <li><span class="time">14:00</span><span><b>Tasik Shoji</b>: tasik paling kecil + sunyi.</span></li>
+      <li><span class="time">14:45</span><span><b>Tasik Motosu</b>: view Fuji dalam duit ¥1,000 lama.</span></li>
+      <li><span class="time">Petang</span><span>Balik awal. Siap bekal untuk Disney. Tidur awal.</span></li>
+    </ol>
+  </section>
+
+  <section id="hari-5" class="day" aria-labelledby="h5t">
+    <h2 id="h5t"><span class="n">Hari 5</span> Tokyo Disneyland <span class="d">Isnin, 15 Mac</span></h2>
+    <ol class="plan">
+      <li><span class="time">06:30</span><span>Keluar homestay (~2–2.5 jam). Budak sambung tidur dalam van.</span></li>
+      <li><span class="time">09:00</span><span>Sampai Disney.</span></li>
+      <li><span class="time">Siang</span><span>Ride untuk budak: It's a Small World, Dumbo, Pooh's Hunny Hunt, Monsters Inc, Beauty and the Beast. Tengok parade.</span></li>
+      <li><span class="time">19:00</span><span>Keluar Disney. Sampai homestay ~21:30.</span></li>
+    </ol>
+    <ul class="tips">
+      <li>Tiada makanan halal certified di Disney. Bawa bekal dari homestay.</li>
+      <li>Solat: Quiet Room di luar pintu masuk utama (kanan). Minta di Main Street House. Bawa sejadah.</li>
+      <li>Hari paling panjang untuk driver (~15 jam). Tanya caj lebih masa.</li>
+    </ul>
+  </section>
+
+  <section id="hari-6" class="day" aria-labelledby="h6t">
+    <h2 id="h6t"><span class="n">Hari 6</span> Safari, terus balik <span class="d">Selasa, 16 Mac</span></h2>
+    <ol class="plan">
+      <li><span class="time">08:00</span><span>Check-out. Semua beg masuk van.</span></li>
+      <li><span class="time">09:00</span><span><b>Fuji Safari Park</b> (~1 jam). Naik Jungle Bus, bagi makan haiwan dari tingkap.</span></li>
+      <li><span class="time">12:30</span><span><b>Gotemba Premium Outlets</b>. Ada prayer room (minta security buka).</span></li>
+      <li><span class="time">15:00</span><span>Ke Haneda (~1.5 jam).</span></li>
+    </ol>
+    <ul class="tips">
+      <li>Flight balik perlu lepas ~19:00. Kalau flight lebih awal, buang Safari.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="gem">
+    <h2 id="gem">Tempat tersembunyi</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Tempat</th><th>Kenapa pergi</th></tr></thead>
+        <tbody>
+          <tr><td>Fugaku Wind Cave + Narusawa Ice Cave</td><td>Gua lava, ada ais dalam gua masa musim sejuk</td></tr>
+          <tr><td>Saiko Iyashi no Sato Nenba</td><td>Kampung atap jerami, ada ruang solat + menu halal</td></tr>
+          <tr><td>Tasik Shoji</td><td>Tasik paling kecil + sunyi, view Fuji</td></tr>
+          <tr><td>Tasik Motosu</td><td>View Fuji dalam duit ¥1,000 lama</td></tr>
+          <tr><td>Fuji Oshino Berryland</td><td>Petik strawberi sendiri</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="solat">
+    <h2 id="solat">Waktu solat</h2>
+    <p class="caption">Anggaran Kawaguchiko, pertengahan Mac. Semak waktu tepat + kiblat di Muslim Pro. Musafir boleh jamak + qasar.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Subuh</th><th>Syuruk</th><th>Zohor</th><th>Asar</th><th>Maghrib</th><th>Isyak</th></tr></thead>
+        <tbody><tr><td>4:25</td><td>5:55</td><td>11:55</td><td>15:15</td><td>17:50</td><td>19:15</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="barang" aria-labelledby="bt">
+    <h2 id="bt">Makanan + barang</h2>
+    <div class="callout">
+      <p><b>Jangan bawa</b> apa-apa yang ada daging, ayam atau telur dari Malaysia, termasuk retort, serunding dan rendang. Jepun larang, boleh kena tangkap.</p>
+    </div>
+    <ul class="tips">
+      <li>Boleh bawa: rempah, kicap, sos, sambal tanpa daging, mi segera perisa sayur / seafood, biskut, snek budak.</li>
+      <li>Daging / ayam halal: beli di Jepun (kedai halal Tokyo, order online).</li>
+      <li>7-Eleven, Lawson, FamilyMart: kebanyakan tiada sijil halal.</li>
+      <li>Cuaca Kawaguchiko pertengahan Mac: lebih kurang -3 hingga 10°C. Boleh turun salji.</li>
+      <li>Baju: thermal, jaket tebal, topi, sarung tangan kalis air, stokin tebal, kasut kalis air.</li>
+      <li>Ayyash + Iris: stroller ringan atau baby carrier, snowsuit sendiri.</li>
+      <li>Van: 4 child seat (Ayyash, Iris, Ivy, Iz). Booster untuk Ayish kalau nak.</li>
+    </ul>
+  </section>
+
+  <section id="tempahan" aria-labelledby="tt">
+    <h2 id="tt">Tempahan</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Perkara</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Flight ke Haneda (sampai 11 Mac pagi, balik 16 Mac lepas 19:00)</td><td class="status">Belum</td></tr>
+          <tr><td>Homestay rumah penuh di Kawaguchiko (11 orang, dapur, parking van)</td><td class="status">Belum</td></tr>
+          <tr><td>Van + driver 6 hari, 4 child seat</td><td class="status">Belum</td></tr>
+          <tr><td>Tiket Tokyo Disneyland</td><td class="status">Belum</td></tr>
+          <tr><td>Daging halal online, hantar ke homestay</td><td class="status">Belum</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <details>
+    <summary>Sumber (semak semula dekat tarikh)</summary>
+    <ul>
+      <li><a href="https://japan-guide.com/e/e6931.html">Fujiten Snow Resort</a></li>
+      <li><a href="https://www.groovyjapan.com/en/fujikawaguchiko-masjid">Masjid Fujikawaguchiko</a></li>
+      <li><a href="https://japanactivity.com/kawaguchiko-budget-vegan-and-halal-food">Makanan halal Kawaguchiko</a></li>
+      <li><a href="https://www.japan-guide.com/e/e6907.html">Gua + Iyashi no Sato</a></li>
+      <li><a href="https://japandeluxetours.com/experiences/fuji-oshino-berry-land">Fuji Oshino Berryland</a></li>
+      <li><a href="https://fujisafari.co.jp/en">Fuji Safari Park</a></li>
+      <li><a href="https://fujinokuni.shokunomiyako-shizuoka.pref.shizuoka.jp/en/halal/restaurant/780">Prayer room Gotemba Outlets</a></li>
+      <li><a href="https://groovyjapan.com/en/disneyguide">Disney untuk Muslim</a></li>
+      <li><a href="https://www.maff.go.jp/aqs/english/product/import.html">Larangan bawa daging ke Jepun</a></li>
+    </ul>
+  </details>
+
+  <footer>Dikemas kini 2 Nov 2026. Waktu, harga dan musim perlu disemak semula dekat tarikh trip.</footer>
+</main>
+</body>
+</html>
